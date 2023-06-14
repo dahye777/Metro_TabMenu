@@ -1,0 +1,94 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+figure {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  z-index: 1;
+  background-color: #333;
+}
+
+#metro nav {
+  width: 100%;
+  padding: 20px 10vw;
+  display: flex;
+  gap: 40px;
+}
+#metro nav a {
+  color: #999;
+}
+#metro nav a.on {
+  color: #000;
+}
+#metro section {
+  display: none;
+  padding: 5px;
+}
+#metro section::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+#metro section.on {
+  display: block;
+}
+#metro section article {
+  width: 25%;
+  height: 25vw;
+  padding: 5px;
+  float: left;
+}
+#metro section article .inner {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transform: scale(0);
+  transition: 0.5s;
+}
+#metro section.active article .inner {
+  opacity: 1;
+  transform: scale(1);
+}
+#metro #News article:nth-of-type(1), #metro #News article:nth-of-type(4), #metro #News article:nth-of-type(9) {
+  width: 50%;
+}
+#metro #News article .inner {
+  background-color: lightblue;
+}
+#metro #Gallery article:nth-of-type(3), #metro #Gallery article:nth-of-type(9) {
+  width: 50%;
+}
+#metro #Gallery article .inner {
+  background-color: lightgreen;
+}
+#metro #Notice article:nth-of-type(2), #metro #Notice article:nth-of-type(8) {
+  width: 50%;
+}
+#metro #Notice article .inner {
+  background-color: orange;
+}
+
+#location {
+  width: 100%;
+  height: 60vh;
+  background-color: #32354f;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+/*# sourceMappingURL=style.css.map */
